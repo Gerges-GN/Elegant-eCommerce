@@ -5,8 +5,8 @@ import ProductsCarousel from "../components/home/ProductsCarousel";
 function Home() {
   return (
     <main>
-      {/* <Hero />
-      <Brands /> */}
+      <Hero />
+      <Brands />
       <ProductsCarousel />
       home
     </main>

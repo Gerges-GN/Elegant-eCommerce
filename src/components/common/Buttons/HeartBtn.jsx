@@ -3,7 +3,7 @@ import { HeartIcon } from "../../../assets/icons";
 
 function HeartBtn({className}) {
   const [isFav, setIsFav] = useState(false);
-  console.log(isFav);
+  // console.log(isFav);
 
   return (
     <button

@@ -9,10 +9,9 @@ export default defineConfig({
     react(),
     svgr({
       svgrOptions: {
-        icon: true, // makes SVG scale like icons
+        icon: true,
       },
     }),
-    
     tailwindcss(),
   ],
 });

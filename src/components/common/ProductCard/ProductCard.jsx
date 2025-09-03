@@ -5,10 +5,10 @@ import { PrimaryBtn } from "../Buttons";
 import HeartBtn from "../Buttons/HeartBtn";
 import RatingStars from "./RatingStars";
 
-function ProductCard(product) {
+function ProductCard({ product }) {
   const [added, setAdded] = useState(false);
 
-  // // Temporary placeholder
+  // Temporary placeholder
   const {
     title = "Skullcandy - Crusher anc 2 wireless headphones Skullcandy - Crusher anc 2 wireless headphones",
     newPrice = 299.99,
@@ -23,7 +23,7 @@ function ProductCard(product) {
     "opacity-0  invisible group-hover:opacity-100 group-hover:visible transition-all ease-in-out duration-150";
 
   return (
-    <div className="h-[450px] w-3xs m-5 group">
+    <div className="h-[400px] md:h-[450px] min-w-[230px] md:min-w-[250px] group">
       {/* Image section */}
       <div className="bg-neutral-200 h-3/4 relative">
         <div className="flex flex-col justify-between absolute top-0 left-0 z-50 w-full h-full p-5">
@@ -58,15 +58,21 @@ function ProductCard(product) {
           <img
             src={cardPlaceholder}
             alt="Card Placeholder Image"
-            className="px-11 pt-16 group-hover:-translate-y-3 transition-all"
+            className={`${
+              added && "-translate-y-3"
+            } px-11 pt-16 group-hover:-translate-y-3 transition-all`}
           />
         </div>
       </div>
       {/* Text section */}
-      <div className="mt-3 font-inter">
-        <RatingStars numberOfStars={rate} size="sm" />
-        <h3 className="font-semibold leading-6 mt-1.5 line-clamp-2">{title}</h3>
-        <span className="flex gap-2 mt-1.5 text-sm">
+      <div className="mt-3 font-inter min-h-[21%] max-h-1/5 flex flex-col justify-between">
+        <div className="">
+          <RatingStars numberOfStars={rate} size="sm" />
+          <h3 className="font-semibold leading-6 mt-1.5 line-clamp-2">
+            {title}
+          </h3>
+        </div>
+        <span className="flex gap-2 pt- text-sm">
           <p className="font-semibold">${newPrice}</p>
           {newPrice < oldPrice && (
             <p className="text-neutral-400 line-through">${oldPrice}</p>

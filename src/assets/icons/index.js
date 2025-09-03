@@ -1,4 +1,5 @@
 export { ReactComponent as ArrowIcon } from "./arrow-right.svg";
+export { ReactComponent as ArrowSmallIcon } from "./arrow-small.svg";
 export { ReactComponent as TicktIcon } from "./ticket-percent.svg";
 export { ReactComponent as CloseIcon } from "./close-rounded.svg";
 export { ReactComponent as EyeIcon } from "./eye.svg";
