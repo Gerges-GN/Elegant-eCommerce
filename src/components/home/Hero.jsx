@@ -2,15 +2,16 @@ import { PrimaryBtn } from "../common/Buttons";
 import heroImg from "../../assets/images/hero.png";
 
 function Hero() {
+  // Enhancements: Fix the max hight
   return (
-    <section className="bg-gradient-to-tr from-secondary to-[#EDD553]">
+    <section className="bg-gradient-to-tr from-secondary to-[#EDD553] md:max-h-[calc(100vh-60px)] overflow-hidden">
       <div className="container flex flex-col-reverse md:flex-row items-center px-5 lg:px-20 m-auto">
         <div className="md:flex-1/2">
-          <div className="overflow-hidden max-w-[300px] lg:max-w-full pt-10 md:pt-20">
+          <div className="overflow-hidden max-w-[300px] md:max-w-[300px] lg:max-w-[500px] pt-10 md:pt-20">
             <img
               src={heroImg}
-              alt="Hero"
-              className="w-full object-cover lg:px-10"
+              alt="Man waring Headset"
+              className="w-full object-cover lg]:px-16"
             />
           </div>
         </div>
@@ -27,7 +28,11 @@ function Hero() {
             <p className="text-base leading-7 md:text-xl mb-2 md:mb-5">
               Experience music like never before
             </p>
-            <PrimaryBtn type="default" content="Shop Now!" link="shop"></PrimaryBtn>
+            <PrimaryBtn
+              type="default"
+              content="Shop Now!"
+              link="shop"
+            ></PrimaryBtn>
           </div>
         </div>
       </div>

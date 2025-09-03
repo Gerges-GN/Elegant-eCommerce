@@ -1,0 +1,6 @@
+export {default as "brandLogo01"} from "./logo 01.svg"
+export {default as "brandLogo02"} from "./logo 02.svg"
+export {default as "brandLogo03"} from "./logo 03.svg"
+export {default as "brandLogo04"} from "./logo 04.svg"
+export {default as "brandLogo05"} from "./logo 05.svg"
+export {default as "brandLogo06"} from "./logo 06.svg"

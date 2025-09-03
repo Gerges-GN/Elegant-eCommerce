@@ -19,3 +19,6 @@ export { ReactComponent as UserCircleIcon } from "./user-circle.svg";
 export { ReactComponent as YoutubeIcon } from "./youtube.svg";
 export { ReactComponent as FacebookIcon } from "./facebook.svg";
 export { ReactComponent as InstagramIcon } from "./instagram.svg";
+export { ReactComponent as StarOutlinedIcon } from "./StarOutline.svg";
+export { ReactComponent as StarFilledIcon } from "./StateFill.svg";
+export { ReactComponent as CheckIcon } from "./check.svg";
