@@ -1,4 +1,4 @@
-import { PrimaryBtn } from "../common/Buttons";
+import { PrimaryButton } from "../common/buttons";
 import heroImg from "../../assets/images/hero.png";
 
 function Hero() {
@@ -28,11 +28,11 @@ function Hero() {
             <p className="text-base leading-7 md:text-xl mb-2 md:mb-5">
               Experience music like never before
             </p>
-            <PrimaryBtn
+            <PrimaryButton
               type="default"
               content="Shop Now!"
               link="shop"
-            ></PrimaryBtn>
+            ></PrimaryButton>
           </div>
         </div>
       </div>

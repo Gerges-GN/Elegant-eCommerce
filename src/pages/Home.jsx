@@ -1,13 +1,12 @@
-import Brands from "../components/home/Brands";
-import Hero from "../components/home/Hero";
-import ProductsCarousel from "../components/home/ProductsCarousel";
+import { Hero, Brands, NewArrivals, ShopCollection } from "../components/home";
 
 function Home() {
   return (
     <main>
       <Hero />
       <Brands />
-      <ProductsCarousel />
+      <NewArrivals />
+      <ShopCollection />
       home
     </main>
   );

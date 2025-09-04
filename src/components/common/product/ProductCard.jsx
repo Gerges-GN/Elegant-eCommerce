@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { CheckIcon } from "../../../assets/icons";
 import cardPlaceholder from "../../../assets/images/Card placeholder image.png";
-import { PrimaryBtn } from "../Buttons";
-import HeartBtn from "../Buttons/HeartBtn";
+import { PrimaryButton, HeartButton } from "../buttons";
 import RatingStars from "./RatingStars";
 
 function ProductCard({ product }) {
@@ -36,10 +35,10 @@ function ProductCard({ product }) {
                 </div>
               )}
             </div>
-            <HeartBtn className={hoverVisibility} />
+            <HeartButton className={hoverVisibility} />
           </div>
           <div>
-            <PrimaryBtn
+            <PrimaryButton
               content={
                 (added && (
                   <span className="flex justify-center items-center gap-1">

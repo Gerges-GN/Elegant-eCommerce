@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import ProductCard from "../common/ProductCard/ProductCard";
+import ProductCard from "../common/product/ProductCard";
 import products from "../../utils/products.json";
 import { ArrowSmallIcon } from "../../assets/icons";
 
-function ProductsCarousel() {
+function NewArrivals() {
   const scrollRef = useRef(null);
   const [disableLeft, setDisableLeft] = useState(true);
   const [disableRight, setDisableRight] = useState(false);
@@ -66,4 +66,4 @@ function ProductsCarousel() {
   );
 }
 
-export default ProductsCarousel;
+export default NewArrivals;

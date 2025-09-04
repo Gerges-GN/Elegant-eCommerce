@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowIcon, CloseIcon, TicktIcon } from "../../../assets/icons";
+import { CloseIcon, TicktIcon } from "../../../assets/icons";
+import { UnderLineButton } from "../buttons";
 
 function TopBanner() {
   const [isVisible, setIsVisible] = useState(true);
@@ -14,13 +14,7 @@ function TopBanner() {
         <TicktIcon className="text-xl" />
         <span>30% off storewide — Limited time!</span>
 
-        <Link
-          to="/shop"
-          className="hidden md:flex items-center ml-1 text-secondary font-light hover:font-normal border-b group transition-all"
-        >
-          <span>Shop Now</span>
-          <ArrowIcon className="ml-1 text-xl transform transition-transform group-hover:translate-x-0.5" />
-        </Link>
+        <UnderLineButton to="/shop" text="Shop Now" secondary className="hidden md:flex" />
       </div>
 
       <CloseIcon

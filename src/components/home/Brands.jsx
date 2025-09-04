@@ -6,7 +6,6 @@ import {
   brandLogo05,
   brandLogo06,
 } from "../../assets/brands";
-import "./home.css";
 
 function Brands() {
   return (
