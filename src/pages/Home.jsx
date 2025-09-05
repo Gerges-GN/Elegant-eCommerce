@@ -1,4 +1,4 @@
-import { Hero, Brands, NewArrivals, ShopCollection } from "../components/home";
+import { Hero, Brands, NewArrivals, ShopCollection, BestSeller } from "../components/home";
 
 function Home() {
   return (
@@ -7,7 +7,7 @@ function Home() {
       <Brands />
       <NewArrivals />
       <ShopCollection />
-      home
+      <BestSeller />
     </main>
   );
 }

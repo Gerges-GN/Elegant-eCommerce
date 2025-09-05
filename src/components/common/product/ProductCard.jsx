@@ -4,7 +4,7 @@ import cardPlaceholder from "../../../assets/images/Card placeholder image.png";
 import { PrimaryButton, HeartButton } from "../buttons";
 import RatingStars from "./RatingStars";
 
-function ProductCard({ product }) {
+function ProductCard({ product, small }) {
   const [added, setAdded] = useState(false);
 
   // Temporary placeholder
@@ -22,12 +22,18 @@ function ProductCard({ product }) {
     "opacity-0  invisible group-hover:opacity-100 group-hover:visible transition-all ease-in-out duration-150";
 
   return (
-    <div className="h-[400px] md:h-[450px] min-w-[230px] md:min-w-[250px] group">
+    <div
+      className={`${
+        small
+          ? "h-[330px] md:h-[350px] lg:h-[400p] 2xl:h-[450px] min-w-[150px] md:min-w-[200px] max-w-[200px] md:max-w-[250px]"
+          : "h-[400px] md:h-[450px] min-w-[230px] md:min-w-[250px] max-w-[230px] md:max-w-[250px]"
+      } group mb-2 md:px`}
+    >
       {/* Image section */}
       <div className="bg-neutral-200 h-3/4 relative">
         <div className="flex flex-col justify-between absolute top-0 left-0 z-50 w-full h-full p-5">
           <div className="flex justify-between items-start">
-            <div className="text-centerfont-semibold *:px-2 *:rounded cursor-default">
+            <div className="text-center text-sm md:text-lg font-medium md:font-semibold *:px-2 *:rounded cursor-default">
               {isNew && <div className="bg-white ">NEW</div>}
               {discount > 0 && (
                 <div className="bg-success text-white mt-1">
@@ -47,7 +53,7 @@ function ProductCard({ product }) {
                 )) ||
                 "Add to card"
               }
-              className={`${!added && hoverVisibility} w-full !text-sm`}
+              className={`${!added && hoverVisibility} w-full !text-sm !px-2`}
               onClick={() => setAdded(!added)}
             />
           </div>
@@ -57,9 +63,9 @@ function ProductCard({ product }) {
           <img
             src={cardPlaceholder}
             alt="Card Placeholder Image"
-            className={`${
-              added && "-translate-y-3"
-            } px-11 pt-16 group-hover:-translate-y-3 transition-all`}
+            className={`${added && "-translate-y-3"} ${
+              small ? "px-5 sm:px-9 pt-14 md:px-11 md:pt-16" : "px-11 pt-16"
+            }  group-hover:-translate-y-3 transition-all`}
           />
         </div>
       </div>
